@@ -12,7 +12,7 @@ const credentials = {key: privateKey, cert: certificate};
 const FacebookStrategy = require('passport-facebook').Strategy;
 require('dotenv').config();
 
-app.use(express.static('./index'))
+app.use(express.static('public'));
 
 passport.use(new FacebookStrategy({
   clientID: process.env.FACEBOOK_APP_ID,
