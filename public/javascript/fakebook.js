@@ -1,7 +1,6 @@
 function attack() {
     var password = document.getElementById("password").value;
-    alert("your password is: " + password);
-    window.location.href = "https://localhost:8000/site"
+    console.log(password);
 }
 
 function run() {
