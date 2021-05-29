@@ -4,6 +4,7 @@ const port = 8000
 const passport = require('passport')
 const fs = require('fs');
 const https = require('https');
+const path = require('path');
 
 const privateKey  = fs.readFileSync('key/showcase.key', 'utf8');
 const certificate = fs.readFileSync('key/showcase.crt', 'utf8');
@@ -27,8 +28,8 @@ function(accessToken, refreshToken, profile, cb) {
 }
 ));
 
-app.get('/',
-  express.static('./index.html'));
+// app.get('/',
+//   express.static('./index.html'));
 
 app.get('/login',
   passport.authenticate('facebook'));
@@ -38,6 +39,11 @@ app.get('/home',
   function(req, res) {
     // Successful authentication, redirect home.
     res.redirect('/home');
+  });
+
+app.get('/site',
+  (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/site.html'))
   });
 
 app.use(passport.initialize());
