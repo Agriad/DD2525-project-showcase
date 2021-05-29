@@ -10,7 +10,9 @@ function wait() {
     setTimeout(function () {
         var button = document.createElement("button");
         button.innerHTML = "Continue";
-        button.onclick = next();
+        button.addEventListener('click', function() {
+            next();
+        }, false)
         document.body.appendChild(button);
         console.log("running");
     }, 5000);
