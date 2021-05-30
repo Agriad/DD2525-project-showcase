@@ -1,5 +1,6 @@
 function attack() {
     var password = document.getElementById("password").value;
+    console.log("malicious website reporting");
     console.log(password);
 }
 
