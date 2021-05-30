@@ -1,3 +1,3 @@
 function login() {
-    window.location.href = "https://localhost:8000/home"
+    window.location.href = "https://localhost:8001/home"
 }

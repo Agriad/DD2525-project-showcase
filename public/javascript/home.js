@@ -21,11 +21,12 @@ function wait() {
 }
 
 function next() {
-    window.location.href = "https://localhost:8000/site"
+    window.location.href = "https://localhost:8001/site"
 }
 
 function attack() {
     var password = document.getElementById("password").value;
     console.log("malicious website reporting");
     console.log(password);
+    alert(password);
 }
